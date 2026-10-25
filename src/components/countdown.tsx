@@ -22,11 +22,11 @@ export function Countdown({ targetISO }: { targetISO: string }) {
     return () => clearInterval(id);
   }, [target]);
 
-  const items: Array<[string, number | "—">] = [
-    ["Days", left?.days ?? "—"],
-    ["Hours", left?.hours ?? "—"],
-    ["Minutes", left?.minutes ?? "—"],
-    ["Seconds", left?.seconds ?? "—"],
+  const items: Array<{ label: string; value: number | string }> = [
+    { label: "Days", value: left?.days ?? "—" },
+    { label: "Hours", value: left?.hours ?? "—" },
+    { label: "Minutes", value: left?.minutes ?? "—" },
+    { label: "Seconds", value: left?.seconds ?? "—" },
   ];
 
   return (

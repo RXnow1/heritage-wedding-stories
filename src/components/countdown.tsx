@@ -31,9 +31,9 @@ export function Countdown({ targetISO }: { targetISO: string }) {
 
   return (
     <div className="flex justify-center gap-3 sm:gap-6" aria-label="Countdown to the wedding">
-      {items.map(([label, value]) => (
+      {items.map((item) => (
         <div
-          key={label}
+          key={item.label}
           className="ornate-border min-w-[68px] rounded-xl bg-maroon-deep/40 px-3 py-3 text-center backdrop-blur-sm sm:min-w-[92px] sm:px-5 sm:py-4"
         >
           <div className="font-display text-3xl text-shimmer-gold sm:text-5xl">{value}</div>
